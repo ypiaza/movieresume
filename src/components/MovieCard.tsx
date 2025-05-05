@@ -1,0 +1,26 @@
+import { Link } from "react-router-dom"
+import { FaStar } from "react-icons/fa"
+
+const imageUrl = import.meta.env.VITE_IMG
+
+const MovieCard = ({ movie, showLink = true }) => {
+    return (
+        <div className=" shadow-2xl duration-300 overflow-hidden bg-neutral-950 text-white cursor-pointer">
+            <img src={imageUrl + movie.poster_path} alt={movie.title} />
+            <div className="flex flex-col items-center justify-between py-2 px-3 gap-4">
+                <div className="flex items-center justify-between w-full">
+                    <h2 className="font-bold">{movie.title}</h2>
+                    <p>
+                        <FaStar /> {movie.vote_avarage}
+                    </p>
+                </div>
+
+                <div>
+                    {showLink && <Link to={`/movie/${movie.id}`} className="text-amber-400">Detalhes</Link>}
+                </div>
+            </div>
+        </div>
+    )
+}
+
+export default MovieCard
