@@ -3,11 +3,11 @@ import { Outlet } from "react-router-dom"
 
 const App = () => {
   return (
-    <div>
-      <div>
+    <div className="bg-zinc-950">
+      <div className=" flex items-center w-full justify-center">
         <NavBar />
       </div>
-      <div className="mt-12">
+      <div>
         <Outlet />
       </div>
     </div>

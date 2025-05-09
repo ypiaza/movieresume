@@ -22,9 +22,9 @@ const Home = () => {
   }, [])
 
   return (
-    <div className="grid grid-cols-4 gap-1">
+    <div className="grid grid-cols-5">
       {topMovies.length === 0 && <p>Carregando...</p>}
-      {topMovies && topMovies.map((movie) => <MovieCard movie={movie} />)}
+      {topMovies && topMovies.map((movie) => <MovieCard key={movie.id} movie={movie} />)}
     </div>
   )
 }

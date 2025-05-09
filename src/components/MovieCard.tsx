@@ -5,13 +5,13 @@ const imageUrl = import.meta.env.VITE_IMG
 
 const MovieCard = ({ movie, showLink = true }) => {
     return (
-        <div className=" shadow-2xl duration-300 overflow-hidden bg-neutral-950 text-white cursor-pointer">
+        <div className="duration-300 overflow-hidden p-1 bg-neutral-950 hover:bg-white text-white cursor-pointer border border-zinc-950/10 hover:border-white/70 hover:shadow-2xl hover:scale-95 hover:shadow-white/50">
             <img src={imageUrl + movie.poster_path} alt={movie.title} />
             <div className="flex flex-col items-center justify-between py-2 px-3 gap-4">
                 <div className="flex items-center justify-between w-full">
                     <h2 className="font-bold">{movie.title}</h2>
                     <p>
-                        <FaStar /> {movie.vote_avarage}
+                        <FaStar/> {movie.vote_avarage}
                     </p>
                 </div>
 
